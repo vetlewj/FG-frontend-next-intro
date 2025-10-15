@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import Link from 'next/link';
 import type { Pokemon } from '@/types/pokemon';
 
 interface PokemonListProps {
@@ -34,12 +35,17 @@ export default function PokemonList({ pokemon }: PokemonListProps) {
         <ul>
             {filteredPokemon.length > 0 ? (
               filteredPokemon.map((p) => (
-                <li key={p.name} className="px-2 py-2">
-                  {p.name}
+                <li key={p.name} className="border-b border-gray-200 last:border-b-0">
+                  <Link 
+                    href={`/pokemon/${p.name}`}
+                    className="block px-4 py-3 hover:cursor-pointer transition-colors capitalize"
+                  >
+                    {p.name}
+                  </Link>
                 </li>
               ))
             ) : (
-              <li>
+              <li className="px-4 py-3">
                 No Pokemon found
               </li>
             )}
