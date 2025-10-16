@@ -1,4 +1,4 @@
-import { getPokemonByName } from '@/app/lib/db';
+import { getPokemonByName } from '@/lib/db';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';

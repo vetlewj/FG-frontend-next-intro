@@ -1,5 +1,5 @@
 import PokemonList from '@/components/PokemonList';
-import { getPokemon } from './lib/db';
+import { getPokemon } from '@/lib/db';
 
 export default async function Home() {
   // Hente fra "database"
