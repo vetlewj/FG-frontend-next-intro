@@ -37,11 +37,14 @@ export default async function PokemonPage({ params }: PokemonPageProps) {
 
   return (
     <div className="min-h-screen p-8 pb-20 sm:p-20">
-          <h2 className="text-3xl font-bold mb-4 capitalize">
-            <span className='font-normal'>Name:</span> {pokemon.name}
-          </h2>
-          {pokemonDetails && (
-            <>
+        <Link href="/" >
+          Back
+        </Link>
+        <h2 className="text-3xl font-bold mb-4 capitalize">
+          <span className='font-normal'>Name:</span> {pokemon.name}
+        </h2>
+        {pokemonDetails && (
+          <>
               <Image
                 src={pokemonDetails.sprites.front_default}
                 alt={pokemon.name}

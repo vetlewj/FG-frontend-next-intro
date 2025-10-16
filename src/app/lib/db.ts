@@ -1,3 +1,4 @@
+"import server-only";
 import { cache } from "react";
 import pokemonData from "./pokemon.json";
 
